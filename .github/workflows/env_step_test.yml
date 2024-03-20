@@ -1,0 +1,13 @@
+name: ENV Step Test
+on: [push, workflow_dispatch]
+jobs:
+  env-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Run a one-line script
+        env:
+          WORLD: World
+        run: echo Hello $WORLD!
+      - name: Run a multi-line script
+        run: echo Hello $WORLD! 
