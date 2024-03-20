@@ -5,9 +5,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: Run a one-line script
+      - name: With ENV var
         env:
           WORLD: World
         run: echo Hello $WORLD!
-      - name: Run a multi-line script
+      - name: Without ENV var
         run: echo Hello $WORLD! 
